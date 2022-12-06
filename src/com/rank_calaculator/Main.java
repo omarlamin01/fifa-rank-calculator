@@ -178,6 +178,20 @@ public class Main {
             System.out.println("**********************************************");
             System.out.println();
         }
+
+        game = new Game();
+        game.setA(group_h[0]);
+        game.setB(group_f[0]);
+        game.setResult(Results.DRAW);
+        game.setType(Types.FIFA_WORLD_CUP_FROM_QF_STAGES);
+
+        System.out.println(game.getA().getAbreviation() + " vs " + game.getB().getAbreviation());
+        game.updateScore();
+        System.out.println(game.getA().getAbreviation() + " score is " + (game.getA().getScore()));
+        System.out.println(game.getB().getAbreviation() + " score is " + (game.getB().getScore()));
+        System.out.println();
+        System.out.println("**********************************************");
+        System.out.println();
     }
 
 }
