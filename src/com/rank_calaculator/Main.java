@@ -33,10 +33,28 @@ public class Main {
 
         group_f[3] = team;
 
+        team = new Team();
+        team.setAbreviation("GEO");
+        team.setScore(1307.34F);
+
+        Game game = new Game();
+        game.setA(group_f[0]);
+        game.setB(team);
+        game.setResult(Results.WIN);
+        game.setType(Types.FRIENDLY_DURING_INTERNATIONAL_CALENDAR);
+
+        System.out.println(game.getA().getAbreviation() + " vs " + game.getB().getAbreviation());
+        game.updateScore();
+        System.out.println(game.getA().getAbreviation() + " score is " + (game.getA().getScore()));
+        System.out.println(game.getB().getAbreviation() + " score is " + (game.getB().getScore()));
+        System.out.println();
+        System.out.println("**********************************************");
+        System.out.println();
+
         Game[] group_f_games = new Game[6];
 
 //      MAR v CRO
-        Game game = new Game();
+        game = new Game();
         game.setA(group_f[0]);
         game.setB(group_f[2]);
         game.setResult(Results.DRAW);
